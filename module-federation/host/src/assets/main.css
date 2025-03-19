@@ -1,0 +1,47 @@
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.gap-10 {
+    gap: 10px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.p-10 {
+    padding: 10px;
+}
+
+.bg-red {
+    background-color: #ffcccc;
+}
+
+.bg-green {
+    background-color: green;
+}
+
+.border-1 {
+    border: 1px solid #000;
+}
