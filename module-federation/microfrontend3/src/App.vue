@@ -1,7 +1,11 @@
 <script lang="ts" setup>
-defineProps<{
-  count: number;
-}>();
+import { ref } from 'vue';
+
+const count = ref(1);
+// Custom event listner
+window.addEventListener('updated-count', (event: CustomEvent) => {
+    count.value = event.detail;
+});
 </script>
 
 <template>
