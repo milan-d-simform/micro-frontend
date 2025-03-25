@@ -3,6 +3,7 @@ import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
+import tailwindcss from '@tailwindcss/vite'
 import federation from "@originjs/vite-plugin-federation";
 
 // https://vite.dev/config/
@@ -10,9 +11,12 @@ export default defineConfig({
   plugins: [
     vue(),
     vueDevTools(),
+    tailwindcss(),
     federation({
       name: 'host-app',
+      // Entry file
       filename: 'hostEntry.js',
+      // Modules to consume
       remotes: {
         mf1: "http://localhost:5001/assets/remoteEntry.js",
         mf2: "http://localhost:5002/assets/remoteEntry.js",
@@ -22,15 +26,10 @@ export default defineConfig({
       exposes: {
         './store/count': './src/store/count.ts',
       },
+      // Shared modules
       shared: {
-        vue: {
-          singleton: true,
-          eager: true,
-        },
-        pinia: {
-          singleton: true,
-          eager: true,
-        },
+        vue: { singleton: true },
+        pinia: { singleton: true }
       }
     })
   ],

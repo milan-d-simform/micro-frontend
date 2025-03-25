@@ -1,7 +1,7 @@
 <script setup>
 import { watch } from 'vue';
 import { storeToRefs } from 'pinia';
-import { useCountStore } from '@/store/count'
+import { useCountStore } from '@/store/count';
 import joke from "@/components/Joke.vue";
 
 import mf1App from 'mf1/App';
@@ -25,48 +25,52 @@ window.addEventListener('increment', increment);
 window.addEventListener('decrement', decrement);
 
 watch(
-    () => count.value,
-    () => {
-        window.dispatchEvent(new CustomEvent('updated-count', { detail: count.value }));
-    }
+  () => count.value,
+  () => {
+    window.dispatchEvent(new CustomEvent('updated-count', { detail: count.value }));
+  }
 );
 </script>
 
 <template>
-<h1>HOST</h1>
-<h2>COUNT : {{ count }}</h2>
+<h1 class="text-xl font-medium text-black mt-3 text-center">HOST</h1>
+<h2 class="text-l font-medium text-gray-500 mt-3 mb-3 text-center">
+  COUNT : {{ count }}
+</h2>
 
-<div class="d-flex flex-row gap-10 mt-10">
-    <!-- Micro frontend 1 -->
-    <div class="d-flex flex-column gap-10 align-center border-1 p-10">
-        <div class="d-flex flex-column bg-red p-10">
-            <mf1-app :count="count" />
-        </div>
-        <div class="d-flex flex-column gap-10 w-100 justify-content-center">
-            <mf1-button @increment="increment" @decrement="decrement" />
-        </div>
+<div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+  <!-- Micro frontend 1 -->
+  <div class="flex flex-1 flex-col bg-blue-200 p-4 text-center rounded-lg gap-3">
+    <div class="flex flex-col">
+      <mf1-app :count="count" />
     </div>
-    <!-- Micro frontend 2 -->
-    <div class="d-flex flex-column gap-10 align-center border-1 p-10">
-        <div class="d-flex flex-column bg-red p-10">
-            <mf2-app />
-        </div>
-        <div class="d-flex flex-column gap-10 w-100 justify-content-center">
-            <mf2-button />
-        </div>
-        <div class="d-flex flex-column gap-10 w-100 justify-content-center">
-            <mf2-get-new-joke />
-        </div>
+    <div class="flex gap-3 flex-col items-center">
+      <mf1-button @increment="increment" @decrement="decrement" />
     </div>
-    <!-- Micro frontend 3 -->
-    <div class="d-flex flex-column gap-10 align-center border-1 p-10">
-        <div class="d-flex flex-column bg-red p-10">
-            <mf3-app :count="count" />
-        </div>
-         <div class="d-flex flex-column gap-10 w-100 justify-content-center">
-            <mf3-button />
-        </div>
+  </div>
+  <!-- Micro frontend 2 -->
+  <div class="flex flex-1 flex-col bg-green-200 p-4 text-center rounded-lg gap-3">
+    <div class="flex flex-col">
+      <mf2-app />
     </div>
+    <div class="flex gap-3 flex-col items-center">
+       <div class="flex gap-2 justify-content-center">
+        <mf2-button />
+      </div>
+      <div class="flex gap-2 justify-content-center">
+        <mf2-get-new-joke />
+      </div>
+    </div>
+  </div>
+  <!-- Micro frontend 3 -->
+  <div class="flex flex-1 flex-col bg-red-200 p-4 text-center rounded-lg gap-3">
+    <div class="flex flex-col">
+      <mf3-app :count="count" />
+    </div>
+    <div class="flex gap-3 flex-col items-center">
+      <mf3-button />
+    </div>
+  </div>
 </div>
 <joke />
 </template>

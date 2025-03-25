@@ -1,16 +1,16 @@
 <script lang="ts" setup>
 const increment = () => {
-    const event = new CustomEvent('increment');
-    window.dispatchEvent(event);
+  const event = new CustomEvent('increment');
+  window.dispatchEvent(event);
 };
 const decrement = () => {
-    const event = new CustomEvent('decrement');
-    window.dispatchEvent(event);
+  const event = new CustomEvent('decrement');
+  window.dispatchEvent(event);
 };
 </script>
 <template>
-    <div class="d-flex flex-row gap-10 w-100">
-        <button @click="increment">+ From MF3</button>
-        <button @click="decrement">- From MF3</button>
-    </div>
+  <div class="flex flex-row gap-2">
+    <button class="bg-green-700 text-white font-semibold py-2 px-4 rounded-full hover:bg-green-800 cursor-pointer" @click="increment">+</button>
+    <button class="bg-red-700 text-white font-semibold py-2 px-4 rounded-full hover:bg-red-800 cursor-pointer" @click="decrement">-</button>
+  </div>
 </template>
