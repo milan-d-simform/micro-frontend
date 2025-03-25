@@ -44,7 +44,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "src/assets/tailwind.css";`, // Ensure it's included
+        additionalData: `@import "src/assets/main.css";`, // Ensure it's included
       },
     },
   },
