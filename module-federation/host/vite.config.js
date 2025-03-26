@@ -40,5 +40,9 @@ export default defineConfig({
   },
   build: {
     target: "ES2022",
+    rollupOptions: {
+      // Mark it as external to avoid bundling errors
+      external: ['mf1/globalStyles', 'mf2/globalStyles', 'mf3/globalStyles'],
+    },
   },
 })

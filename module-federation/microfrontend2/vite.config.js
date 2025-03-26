@@ -3,7 +3,6 @@ import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
-import tailwindcss from '@tailwindcss/vite'
 import federation from "@originjs/vite-plugin-federation";
 
 // https://vite.dev/config/
@@ -11,7 +10,6 @@ export default defineConfig({
   plugins: [
     vue(),
     vueDevTools(),
-    tailwindcss(),
     federation({
       name: 'mf2',
       // Entry file
@@ -24,6 +22,8 @@ export default defineConfig({
         './GetNewJoke': './src/components/GetNewJoke.vue',
         // Store
         './store/joke': './src/store/joke.ts',
+        // Global Styles
+        './GlobalStyles': './src/global-styles.js',
       },
       // Modules to consume
       remotes: {
