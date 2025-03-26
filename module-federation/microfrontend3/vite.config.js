@@ -32,19 +32,7 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `@import "src/assets/main.css";`, // Ensure it's included
-      },
-    },
-  },
   build: {
     target: "ES2022",
-    rollupOptions: {
-      output: {
-        assetFileNames: 'mf3.[name].[ext]', // Ensure CSS file is emitted
-      },
-    },
   }
 })

@@ -11,3 +11,6 @@ defineProps<{
     <h3 class="text-l font-medium text-gray-500">Count: {{ count }}</h3>
   </div>
 </template>
+<style lang="css">
+/* @import './assets/main.css'; */
+</style>
