@@ -4,7 +4,7 @@
 
 ```bash
 pnpm create vue@latest
-# ✅ Select required features (e.g., TypeScript, Pinia, Router)
+# ✅ Select required features (e.g., TypeScript, Pinia)
 cd microfrontend1
 pnpm install
 ```

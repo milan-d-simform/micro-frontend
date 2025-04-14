@@ -93,5 +93,6 @@ Microfrontends will load based on the configured routes.
 ## 📚 Learn More
 
 - [Single-SPA Documentation](https://single-spa.js.org/docs/getting-started-overview/)
+- [How can I share application state between applications?](https://single-spa.js.org/docs/faq/#how-can-i-share-application-state-between-applications)
 - [Microfrontends](https://micro-frontends.org/)
 - [Vue 3 + Vite](https://vitejs.dev/)

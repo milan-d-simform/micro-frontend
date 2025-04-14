@@ -19,7 +19,7 @@ create-single-spa
 - **Package manager**: `pnpm`
 - **Use TypeScript**: `Y/n` (your choice)
 - **Use Layout Engine**: `Y/n` (recommended: `Y`)
-- **Organization name**: e.g., `@milan`
+- **Organization name**: e.g., `@simform`
 
 ### To run the host app:
 ```bash
@@ -40,7 +40,7 @@ create-single-spa
 - **Directory for new project**: `microfrontend1`
 - **Project type**: `single-spa application / parcel`
 - **Framework**: `Vue`
-- **Organization name**: e.g., `@milan`
+- **Organization name**: e.g., `@simform`
 - **Vue install option**: Choose to install via Vue CLI
 
 ### To run the microfrontend:
@@ -70,7 +70,7 @@ https://generator.jspm.io/#U2VhYGDhD80rySzJSU1hKMjMy0x0MNYz0DNiKM7MS89J1S0uSHQwA
 <script type="systemjs-importmap">
   {
     "imports": {
-      "@milan/microfrontend1": "http://localhost:3001/js/app.js"
+      "@simform/microfrontend1": "http://localhost:3001/js/app.js"
     }
   }
 </script>
@@ -78,7 +78,7 @@ https://generator.jspm.io/#U2VhYGDhD80rySzJSU1hKMjMy0x0MNYz0DNiKM7MS89J1S0uSHQwA
 
 ### In your layout or HTML:
 ```html
-<application name="@milan/microfrontend1"></application>
+<application name="@simform/microfrontend1"></application>
 ```
 
 ---

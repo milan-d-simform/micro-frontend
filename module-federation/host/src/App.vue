@@ -65,7 +65,7 @@ watch(
   <!-- Micro frontend 3 -->
   <div class="flex flex-1 flex-col bg-red-200 p-4 text-center rounded-lg gap-3">
     <div class="flex flex-col">
-      <mf3-app :count="count" />
+      <mf3-app />
     </div>
     <div class="flex gap-3 flex-col items-center">
       <mf3-button />
