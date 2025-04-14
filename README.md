@@ -1,97 +1,85 @@
-# Microfrontend with Single-SPA
+# 🤩 Micro Frontend Architectures (Module Federation & Single-SPA)
 
-This project demonstrates a basic **Microfrontend Architecture** using **[Single-SPA](https://single-spa.js.org/)**. It consists of a **host (root-config)** application that integrates three independently developed microfrontends.
+This repository showcases two distinct implementations of **Microfrontend Architecture** using modern JavaScript tooling:
 
-Each microfrontend is built and deployed independently but rendered seamlessly in the host via route-based mounting — with **no communication between them**.
+- ✅ **[Webpack Module Federation](./module-federation)**  
+- ✅ **[Single-SPA](./single-spa)**  
 
----
-
-## 🚀 Project Structure
-
-- **`host`** – The root config that manages and mounts all microfrontends.
-- **`microfrontend1`** – Independent Vue 3 app integrated via Single-SPA.
-- **`microfrontend2`** – Independent Vue 3 app integrated via Single-SPA.
-- **`microfrontend3`** – Independent Vue 3 app integrated via Single-SPA.
+Each implementation demonstrates how to build, deploy, and integrate multiple independently developed frontend apps (microfrontends) into a single cohesive experience.
 
 ---
 
-## 💠 Prerequisites
+## 📦 Project Structure
 
-- **Node.js** (Latest LTS version recommended)
-- **pnpm / npm / yarn** (Package manager)
-
----
-
-## 📅 Installation
-
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/milan-d-simform/micro-frontend.git
-   cd single-spa
-   ```
-
-2. Install dependencies for each application:
-   ```sh
-   cd host && pnpm install && cd ..
-   cd microfrontend1 && pnpm install && cd ..
-   cd microfrontend2 && pnpm install && cd ..
-   cd microfrontend3 && pnpm install && cd ..
-   ```
-
----
-
-## 🚀 Running the Applications
-
-Start each application in a separate terminal window:
-
-```sh
-# Host application
-cd host
-pnpm run start
-```
-
-```sh
-# Microfrontend 1
-cd microfrontend1
-pnpm run serve
-```
-
-```sh
-# Microfrontend 2
-cd microfrontend2
-pnpm run serve
-```
-
-```sh
-# Microfrontend 3
-cd microfrontend3
-pnpm run serve
+```bash
+micro-frontend/
+├── module-federation/   # Microfrontends using Webpack Module Federation
+├── single-spa/          # Microfrontends using Single-SPA
 ```
 
 ---
 
-## 🌐 Access the Application
+## 🔍 What's Inside?
 
-Visit the host application in your browser:  
-🔗 [http://localhost:9000](http://localhost:9000)
+### 📁 [`module-federation`](./module-federation)
 
-Microfrontends will load based on the configured routes.
+A microfrontend system built with **Webpack Module Federation**.
 
----
+- **Host + 3 Microfrontends**
+- Communication via:
+  - Props and event emitters
+  - Shared Pinia store
+  - Custom browser events
+- One microfrontend fetches jokes via an open API
 
-## 📂 Folder Overview
-
-### `host`
-- Single-SPA root config.
-- Routes and mounts microfrontends.
-
-### `microfrontend1`, `microfrontend2`, `microfrontend3`
-- Standalone Vue 3 applications.
+👉 [View Module Federation README](./module-federation/README.md)
 
 ---
 
-## 📚 Learn More
+### 📁 [`single-spa`](./single-spa)
 
-- [Single-SPA Documentation](https://single-spa.js.org/docs/getting-started-overview/)
-- [Microfrontends](https://micro-frontends.org/)
-- [Vue 3 + Vite](https://vitejs.dev/)
+A simplified example of **Single-SPA**-based microfrontends.
+
+- **Host + 3 Microfrontends**
+- Pure integration to showcase routing-based mounting
+
+👉 [View Single-SPA README](./single-spa/README.md)
+
+---
+
+## 🛠 Prerequisites
+
+- **Node.js** (LTS version recommended)
+- **pnpm** (preferred) or **npm/yarn**
+
+---
+
+## 🧪 Run Locally
+
+Each implementation is fully independent. Follow setup instructions in their respective folders:
+
+```bash
+cd module-federation
+# OR
+cd single-spa
+```
+
+---
+
+## 🌐 Use Case
+
+This repository is ideal for:
+
+- Learning and comparing **Module Federation** vs **Single-SPA**
+- Building scalable microfrontend applications
+- Exploring different **communication strategies** between micro apps
+
+---
+
+## 🧠 Learn More
+
+- [Microfrontends Architecture](https://micro-frontends.org/)
+- [Webpack Module Federation](https://webpack.js.org/concepts/module-federation/)
+- [Single-SPA](https://single-spa.js.org/)
+- [Vue 3](https://vuejs.org/)
+- [Vite](https://vitejs.dev/)
