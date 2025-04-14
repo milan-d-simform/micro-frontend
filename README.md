@@ -34,6 +34,8 @@ A microfrontend system built with **Webpack Module Federation**.
 
 👉 [View Module Federation README](./module-federation/README.md)
 
+👉 [Setting Up Microfrontends with Module Federation (Vue 3 + Vite) README](./module-federation/module-federation.md)
+
 ---
 
 ### 📁 [`single-spa`](./single-spa)
@@ -44,6 +46,8 @@ A simplified example of **Single-SPA**-based microfrontends.
 - Pure integration to showcase routing-based mounting
 
 👉 [View Single-SPA README](./single-spa/README.md)
+
+👉 [Setting Up Microfrontends with Single-SPA README](./single-spa/single-spa.md)
 
 ---
 
