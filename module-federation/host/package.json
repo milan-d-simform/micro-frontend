@@ -7,8 +7,7 @@
     "dev": "vite --port 5000",
     "build": "vite build",
     "preview": "vite preview --port 5000",
-    "build-n-preview": "pnpm run build && pnpm run preview",
-    "build-n-preview-all": "pnpm run build && pnpm run preview"
+    "build-n-preview": "pnpm run build && pnpm run preview"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.15",
